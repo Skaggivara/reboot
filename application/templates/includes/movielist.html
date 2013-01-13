@@ -1,0 +1,18 @@
+{% for movie in movies %}
+<li {% if loop.first and offset == 0 %}class="nr1"{% endif %} id="movie_{{ movie.service_id }}" data-movie="{{ movie.service_id }}" data-votes="{{movie.votes}}" data-title="{{movie.title}}">
+        
+    <div class="details clearfix">
+        <a href="/movie/{{movie.service_id}}" class="postercontainer"><img class="poster" src="{{image_path}}{% if loop.first %}w342{% else %}w154{% endif %}{{movie.poster}}" /></a>
+        <div class="detail">
+            <h4><a href="/movie/{{movie.service_id}}"><span>Nr {{loop.index + offset}}.</span> {{ movie.title }}</a></h4>
+            <h5><span class="votes">({{movie.votes}} vote{% if movie.votes != 1 %}s{% endif %})</span>, {{movie.year}}, {% if movie.imdb_id != "unknown" %}<a href="http://www.imdb.com/title/{{movie.imdb_id}}" target="_blank">imdb link</a>{% endif %} {% if movie.being_made %}<span class='inproduction'>In production!</span>{% elif movie.already_made %}<span class='produced'>Already made</span>{% endif %}</h5>
+            <p>{% if loop.index > 1 %}{{ movie.description|truncate(length=100) }} <a href="/movie/{{movie.service_id}}">more</a>{% else %}{{ movie.description }}{% endif %}</p>
+                
+            <div class="actions">
+                <a href="#" class="votebtn" data-id="{{ movie.service_id }}" data-title="{{movie.title}}" data-poster="{{movie.poster}}"><span>Vote</span></a>
+            </div>
+        </div>
+            
+    </div>
+</li>
+{% endfor %}

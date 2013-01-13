@@ -1,0 +1,113 @@
+/* Main stylesheet */
+@import "reset.less";
+@import "elements.less";
+@import "clearfix.less";
+
+html{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    padding: 0;
+    margin: 0;
+    
+    text-align: left;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    
+    background-color: #fff;
+    color: #000;
+    
+}
+
+a,
+a:link,
+a:active,
+a:visited,
+a:hover{
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    font-size: 12px;
+    line-height: 1em;
+    color:#000;
+    text-decoration:underline;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+th{
+    font-weight: bold;
+    background: #eaeaea;
+}
+td, th{
+    vertical-align:top;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+
+table{
+    width: 100%;
+    min-width: 720px;
+}
+
+td img{
+    display: block;
+}
+
+td.profile{
+    text-align: center;
+}
+
+td.profile img{
+    display:inline-block;
+}
+
+.header,
+.footer{
+    display: block;
+    background: #bf161c;
+    color: #fff;
+    padding: 10px 10px 10px 5px;
+    font-size: 14px;
+    line-height: 1em;
+    font-weight: normal;
+    
+    text-shadow: 1px 1px #3d090b;
+}
+
+.footer{
+    text-align: center;
+}
+
+.header a,
+.header a:link,
+.header a:active,
+.header a:visited,
+.header a:hover,
+.footer a,
+.footer a:link,
+.footer a:active,
+.footer a:visited,
+.footer a:hover{
+    font-size: 14px;
+    color:#fff;
+    margin: 0;
+}
+
+.header a:hover,
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.header .offset{
+    float: right;
+}
+
+.header h3{
+    float: left;
+}

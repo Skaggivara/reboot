@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title%}Reboot that movie{% endblock %}
+{% block main_script %}<script src="/static/js/main.min.js?v=6" charset="utf-8"></script>{% endblock %}
+
+{% block content %}
+
+<form action="." method="get" id="searchform">
+    
+    <div class="searchinput">
+        <input type="text" placeholder="Search for the movie you want to reboot" id="search" autocomplete="off" />
+        <a href="#" class="closebtn" id="searchclosebtn"><span>close</span></a>
+        <span class="loader"></span>
+    </div>
+    
+    {{ form.csrf_token }}
+    
+</form>
+
+<div class="searchresultcontainer">
+    <ul id="searchresult" class="clearfix" style="display:none;"></ul>
+</div>
+
+<div id="detail" class="clearfix" style="display:none;">
+    
+    <a class="closebtn" href="#">Close</a>
+    
+    <div class="poster">
+        <img src=""/>
+    </div>
+    
+    <div class="info">
+        <h3>Some movie</h3>
+        
+        <div class="details">
+            <span class="votes">(666 votes), </span><span class="year">2013</span>, <span class="imdb"><a href="#" target="_blank">imdb link</a></span>
+        </div>
+        
+        <p>...</p>
+        
+        <div class="actions">
+            <a href="#" class="votebtn"><span>Vote</span></a>
+        </div>
+        
+    </div>
+    
+    <div id="loader"><span>Voting..</span></div>
+</div>
+
+<div id="toplist">
+    
+    {% if total > 0 %}
+    <h2>Top movies</h2>
+    
+    <ol class="clearfix">
+        {% include 'includes/movielist.html' %}
+    </ol>
+    {% endif %}
+</div>
+{% if total > 11 %}
+<a href="#" class="more-btn" data-max="11" data-total="{{total}}"><span>Load more movies</span></a>
+{% endif %}
+
+{% endblock content %}

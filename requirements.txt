@@ -1,0 +1,5 @@
+Jinja2==2.6
+PIL==1.1.7
+itsdangerous==0.17
+simplejson==2.6.2
+wsgiref==0.1.2

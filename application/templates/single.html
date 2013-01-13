@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title%}Reboot that movie - {{movie.title}}{% endblock %}
+{% block main_script %}<script src="/static/js/main.min.js?v=6" charset="utf-8"></script>{% endblock %}
+
+{% block meta %}
+<meta property="og:title" content="{{movie.title}}"/>
+<meta property="og:url" content="http://rebootmymovie.appspot.com/movie/{{movie.service_id}}"/>
+<meta property="og:site_name" content="Reboot that movie!"/>
+<meta property="og:image" content="{{image_path}}w500{{movie.poster}}"/>
+{% endblock %}
+
+{% block headers %}<div id="header"><a href="/" class="search">Find your movie</a></div>{% endblock %}
+
+{% block content %}
+
+<div id="single" class="clearfix">
+    
+    <div class="poster">
+        <img src="{{image_path}}w342{{movie.poster}}" width="280" height="407"/>
+    </div>
+    
+    <div class="info" id="movie_{{movie.service_id}}">
+        <h2>{{movie.title}}</h2>
+        
+        <div class="details">
+            
+            <span class="votes">({{movie.votes}} vote{% if movie.votes > 1 or movie.votes == 0 %}s{% endif %})</span>, <span class="year">{{movie.year}}</span>, <span class="imdb"><a href="http://www.imdb.com/title/{{movie.imdb_id}}" target="_blank">imdb link</a></span>
+        </div>
+        
+        <p>{{movie.description}}</p>
+        
+        <div class="actions">
+            <a href="#" class="votebtn" data-id="{{ movie.service_id }}" data-title="{{movie.title}}" data-poster="{{movie.poster}}"><span>Vote</span></a>
+        </div>
+        
+        <div class="voters">
+            {% if voters %}
+            <h3>Latest supporters</h3>
+            <ul>
+                {% for voter in voters %}
+                <li><a href="http://graph.facebook.com/{{voter.facebook_uid}}/" target="_blank"><img src="http://graph.facebook.com/{{voter.facebook_uid}}/picture?type=square" title="{{voter.facebook_name}}" width="50" height="50" /></a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock content %}

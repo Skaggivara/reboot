@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "user-scalable = no, width = device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <title>{% block title%}Reboot{% endblock %}</title>
+    {% block meta %}{% endblock %}
+    <link href="/static/css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/static/img/favicon.png" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    {% block style_block %}<!-- page-specific CSS -->{% endblock %}
+    {% block head_script %}<!-- defer-incapable JS block -->{% endblock %}
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-9999-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        // init the FB JS SDK
+        FB.init({
+          appId      : '267485730045154', // App ID from the App Dashboard
+          channelUrl : '//rebootmymovie.appspot.com/channel.html', // Channel File for x-domain communication
+          status     : true, // check the login status upon init?
+          cookie     : true, // set sessions cookies to allow your server to access the session?
+          xfbml      : true  // parse XFBML tags on this page?
+        });
+
+        // Additional initialization code such as adding Event Listeners goes here
+
+      };
+
+      // Load the SDK's source Asynchronously
+      // Note that the debug version is being actively developed and might 
+      // contain some type checks that are overly strict. 
+      // Please report such bugs using the bugs tool.
+      (function(d, debug){
+         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+         ref.parentNode.insertBefore(js, ref);
+       }(document, /*debug*/ false));
+    </script>
+    
+    <div id="maincontent">
+        {% block headers %}{% endblock %}
+        <div class="container clearfix">
+            <noscript>To use this page you need to activate javascript</noscript>
+            
+        
+            <div id="intro" class="clearfix">
+                <h1><a href="/">Reboot</a></h1>
+                <p>Vote on the movie you want to see rebooted!</p>
+            </div>
+            
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    
+    <div id="footer">
+        <div class="container clearfix">
+            <div class="one-third">Movie data courtesy of <a href="http://www.themoviedb.org/">themoviedb.org</a> API.</div>
+            
+            <div class="one-third"><a href="#">Privacy Policy</a> and <a href="">Terms &amp; Conditions</a></div>
+            <div class="one-third">Facebook account is required to vote, one vote per movie per user.</div>
+        </div>
+    </div>
+    
+    <div id="message" style="display:none;"><p>You have already voted for that movie.</p><a href="#" class="ok">OK</a></div>
+    <!-- /container -->
+    
+    <script src="/static/js/lib/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/lib/jquery.maxlength.min.js"></script>
+    <script src="/static/js/lib/consolelog.min.js"></script>
+    {% block main_script %}{% endblock %}
+    {% block tail_script %}<!-- defer-capable JS block -->{% endblock %}
+
+</body>
+</html>
