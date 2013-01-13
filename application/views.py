@@ -213,7 +213,12 @@ def _fetch_latest_vote(id):
         return vote
         
     return None
-    
+
+def terms():
+    return render_template("terms.html")
+
+def privacy():
+    return render_template("privacy.html")
 
 """
 def create():

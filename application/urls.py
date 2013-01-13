@@ -22,6 +22,8 @@ app.add_url_rule('/', 'home', view_func=views.home)
 app.add_url_rule('/movie/<id>', 'movie', view_func=views.movie,methods=['GET', 'POST'])
 app.add_url_rule('/vote/<id>', 'vote', view_func=views.vote,methods=['GET', 'POST'])
 app.add_url_rule('/movies', 'movies', view_func=views.movies, methods=['GET'])
+app.add_url_rule('/terms', 'terms', view_func=views.terms)
+app.add_url_rule('/privacy', 'privacy', view_func=views.privacy)
 
 
 # Home page
