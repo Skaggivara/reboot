@@ -1,6 +1,6 @@
 # Steps for google app engine
 
-brew install google-appengine
+brew install google-app-engine
 
 pip install -r requirements.txt
 
@@ -14,54 +14,4 @@ appcfg.py update .
 
 # password for app
 user: isak.wistrom@gmail.com
-pass: okveqivjmluswjeo
-
-# gql for viewing in order of posted
-SELECT * FROM Card order by timestamp desc
-
-SELECT * FROM Card order by timestamp asc
-
-access_token=179446628860973|hYaBIbTRsB_ETck1e2jusOXyTlY
-
-You can't post this because it has a blocked link.: The content you're trying to share includes a link that's been blocked for being spammy or unsafe
-
-
-# TODO
-** remove profiler
-** requires javascript text
-** clean input!
-** uppercase pa namnen
-** lagg in ny bild
-** change to 140 characters max
-** fonterna
-** design, add shadow
-** check breaks on image
-** billing check
-** cancel login what happens?
-** alertboxen, error handling
-** lagga in analytics, s46 konto
-** mobile adaptation
-** clean input server side!!
-** minify javascript
-** listningen av bidrag bakom: guide skriven
-** connect domain name!
-
-* connect hyllahjalte.se till www.hyllahjalte.se
-
-* browser testing
-
-
-# PRELAUNCH, fredag
-* security test
-* loadtest
-* app settings on google app engine and in actual app
-* app settings in facebook
-
-* check links
-* check https
-
-# CHECKLIST
-
-# BEFORE EACH DEPLOY
-* minify javascript
-* change cache random in base.html on css and javascript main files
+pass: hcvayzlcehbxwupb
