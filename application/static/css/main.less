@@ -211,7 +211,7 @@ a:hover{
     
     box-sizing: border-box;
     max-width: 600px;
-    min-width: 400px;
+    min-width: 320px;
     width: 80%;
     
     color: #333;
@@ -752,6 +752,44 @@ noscript{
 
 @media only screen and (max-width: 480px) {
     
+    #detail{
+        margin-top: 15px;
+        padding: 15px 10px 10px 10px;
+        .poster{
+            display: block;
+            float: left;
+            width: 100px;
+            height: auto;
+    
+            img{
+                display: block;
+                width: 100%;
+                background: @gray url(/static/img/gray-loader.gif) no-repeat center center;
+            }
+        }
+    
+        .info{
+            margin-left: 115px;
+        }
+    
+        .closebtn{
+            width: 15px;
+            height: 15px;
+            right: 10px;
+            top: 10px;
+            background: url(/static/img/close-icon-small.png) no-repeat 0 center;
+        }
+    
+    
+        .closebtn:hover{
+            background-position: -15px center;
+        }
+    
+        h3{
+            font-size: 1.5em;
+        }
+    }
+    
     #maincontent{
         .container{
             width: 100%;
@@ -829,6 +867,12 @@ noscript{
         #searchresult{
             position: static;
             width: 100%;
+            
+            li{
+                span{
+                    width: 220px;
+                }
+            }
             
             li:last-child{
                 a, .noresults{
