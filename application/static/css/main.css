@@ -42,12 +42,12 @@ a:hover{text-decoration:none;}
 #searchform .searchinput .closebtn{position:absolute;display:none;text-indent:-99999px;width:15px;height:15px;right:16px;top:16px;background:url(/static/img/close-icon-small.png) no-repeat 0 center;}
 #searchform .searchinput .closebtn:hover{background-position:-15px center;}
 #searchform .searchinput .loader{display:block;position:absolute;width:16px;height:16px;right:16px;top:16px;background:url(/static/img/small-loader.gif) no-repeat center center;display:none;}
-#toplist{margin-top:45px;}#toplist ol{text-align:left;list-style:none;margin:0;}
+#toplist{margin-top:45px;width:100%;border:1px solid re;}#toplist ol{text-align:left;list-style:none;margin:0;width:100%;}
 #toplist h1{margin-bottom:25px;}
 #toplist li{font-size:14px;float:left;width:50%;padding:10px 10px;box-sizing:border-box;}#toplist li .details .poster{width:154px;height:224px;float:left;display:block;background:#ffffff url(/static/img/large-loader.gif) no-repeat center center;-webkit-box-shadow:1px 1px 2px #7f1313;-moz-box-shadow:1px 1px 2px #7f1313;box-shadow:1px 1px 2px #7f1313;}
 #toplist li .details .detail{margin-left:169px;}#toplist li .details .detail p{text-shadow:1px 1px #7f1313;}
 #toplist li .details .actions .votebtn span{font-family:"PT Sans Caption",georgia,serif;font-weight:bold;height:30px;font-size:18px;color:#fff;line-height:30px;padding-left:40px;display:inline-block;background:url(/static/img/vote-icon-small.png) no-repeat left center;text-shadow:1px 1px #7f1313;}
-#toplist li .details .actions .votebtn.loading{padding-left:24px;background:url(/static/img/red-loader-small.gif) no-repeat left center;}#toplist li .details .actions .votebtn.loading span{opacity:.5;}
+#toplist li .details .actions .votebtn.loading{padding-left:24px;background:url(/static/img/red-loader-small.gif) no-repeat left center;}#toplist li .details .actions .votebtn.loading span{}
 #toplist li h4 a{text-decoration:none;font-weight:bold;}
 #toplist li h4 a:hover{text-decoration:underline;}
 #toplist li h5{color:#7f1313;text-shadow:none;}#toplist li h5 a{font-weight:bold;color:#7f1313;}
@@ -56,7 +56,7 @@ a:hover{text-decoration:none;}
 #toplist li.nr1{font-size:16px;line-height:1.5em;float:none;display:block;width:100%;max-width:600px;min-width:320px;margin:0 auto 30px auto;}#toplist li.nr1 .details .poster{max-width:240px;width:40%;height:auto;float:left;display:block;-webkit-box-shadow:1px 1px 2px #7f1313;-moz-box-shadow:1px 1px 2px #7f1313;box-shadow:1px 1px 2px #7f1313;background:#ffffff url(/static/img/large-loader.gif) no-repeat center center;}
 #toplist li.nr1 .details .detail{margin-left:40%;box-sizing:border-box;padding-left:20px;}
 #toplist li.nr1 .details .actions .votebtn span{height:46px;font-size:20px;color:#fff;line-height:46px;padding-left:54px;display:inline-block;background:url(/static/img/vote-icon.png) no-repeat left center;text-shadow:1px 1px #7f1313;}
-#toplist li.nr1 .details .actions .votebtn.loading{display:block;padding-left:42px;background:url(/static/img/red-loader.gif) no-repeat left center;}#toplist li.nr1 .details .actions .votebtn.loading span{opacity:.5;}
+#toplist li.nr1 .details .actions .votebtn.loading{display:block;padding-left:42px;background:url(/static/img/red-loader.gif) no-repeat left center;}#toplist li.nr1 .details .actions .votebtn.loading span{}
 #footer{background:#7f1313;color:#fe2727;}#footer .container{box-sizing:border-box;max-width:960px;width:100%;margin:0 auto;text-align:left;padding:20px 10px 40px 10px;}#footer .container .one-third{box-sizing:border-box;width:33.3333%;float:left;padding:0 10px;}
 #footer .container a{color:#fe2727;font-weight:normal;}
 #footer .container a:hover{color:#fff;}
@@ -66,7 +66,7 @@ a:hover{text-decoration:none;}
 #single .info{width:60%;box-sizing:border-box;padding-left:20px;float:left;text-align:left;}#single .info h2{margin:0 0 4px 0;}
 #single .info .details{font-family:"PT Sans Caption",georgia,serif;font-weight:bold;font-size:1.2em;color:#7f1313;margin-bottom:10px;}#single .info .details a{color:#7f1313;font-weight:bold;}
 #single .info .actions .votebtn span{height:46px;font-size:20px;color:#fff;line-height:46px;padding-left:54px;display:inline-block;background:url(/static/img/vote-icon.png) no-repeat left center;text-shadow:1px 1px #7f1313;}
-#single .info .actions .votebtn.loading{display:block;padding-left:42px;background:url(/static/img/red-loader.gif) no-repeat left center;}#single .info .actions .votebtn.loading span{opacity:.5;}
+#single .info .actions .votebtn.loading{display:block;padding-left:42px;background:url(/static/img/red-loader.gif) no-repeat left center;}#single .info .actions .votebtn.loading span{}
 #single .info p{text-shadow:1px 1px #7f1313;}
 #single .info .voters{padding:20px 0;}#single .info .voters h3{font-size:1.1em;}
 #single .info .voters li{display:block;float:left;width:50px;height:50px;margin:0;}
